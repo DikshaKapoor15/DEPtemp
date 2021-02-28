@@ -1,0 +1,287 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            h1 {text-align: center;}
+            h3 {text-align: center;}
+            form {text-align: center;}
+            img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            * {box-sizing: border-box}
+
+                /* Set height of body and the document to 100% */
+                body, html {
+                height: 100%;
+                margin: 0;
+                font-family: Arial;
+                }
+
+                /* Style tab links */
+                .tablink {
+                background-color: #555;
+                color: white;
+                float: left;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                padding: 14px 16px;
+                font-size: 17px;
+                width: 33.33%;
+                }
+
+                .tablink:hover {
+                background-color: #777;
+                }
+
+                /* Style the tab content (and add height:100% for full page content) */
+                /* .tabcontent {
+                color: white;
+                display: none;
+                padding: 100px 20px;
+                height: 100%;
+                } */
+
+                #Challen {background-color: red;}
+                #Recovery {background-color: green;}
+                #Investigation {background-color: orange;}
+            </style>
+    </head>
+<body>
+    <img src="logo.png" width="600" height="100" >
+    <h1>Police Station Name</h1>
+    <h2 style = "position:relative; left:80px; top:2px;">
+        plots &#8594; <a href="progress.html" target="_blank">progess!</a>
+    </h2>
+    <button class="tablink" onclick="openPage('challan', this, 'green')">Challen</button>
+    <button class="tablink" onclick="openPage('Investigation', this, 'orange')" id="defaultOpen">Investigation</button>
+    <button class="tablink" onclick="openPage('Recovery', this, 'green')">Recovery</button>
+
+    <!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+  <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+  <!--===============================================================================================-->
+
+<div id="challan" class="tabcontent">
+
+
+  <div class="container-contact100">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form">
+				<span class="contact100-form-title">
+					Challan Form
+				</span>
+
+
+				<!-- <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+					<span class="label-input100">Email</span>
+					<input class="input100" type="text" name="email" placeholder="Enter your email addess">
+					<span class="focus-input100"></span>
+				</div> -->
+
+				<div class="wrap-input100 validate-input" data-validate="Name is required">
+					<span class="label-input100">Name of The Police Station & I/C traffic</span>
+					<input class="input100" type="text" name="name" placeholder="Enter The name of Police Station">
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 validate-input">
+					<span class="label-input100">Overloading Tipper & Trucks</span>
+					<input class="input100" type="number" min=0 name="overTT" placeholder="Enter a number">
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 validate-input">
+					<span class="label-input100">Drunken Driving</span>
+					<input class="input100" type="number" min=0 name="Drunken" placeholder="Enter number of cases">
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 validate-input">
+					<span class="label-input100">Over Speed</span>
+					<input class="input100" type="number" min=0 name="overspeed" placeholder="Enter number of cases">
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 validate-input" >
+					<span class="label-input100">Without Helmet/Seat Belt</span>
+					<input class="input100" type="number" min=0 name="helSeat" placeholder="Enter number of cases">
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 validate-input" >
+					<span class="label-input100">Without Mask, Covid-19 Challan</span>
+					<input class="input100" type="number" min=0 name="MaskCov" placeholder="Enter number of cases">
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 validate-input" >
+					<span class="label-input100">Others</span>
+					<input class="input100" type="number" min=0 name="others" placeholder="Enter number of cases">
+					<span class="focus-input100"></span>
+				</div>
+
+
+				<div class="container-contact100-form-btn">
+					<div class="wrap-contact100-form-btn">
+						<div class="contact100-form-bgbtn"></div>
+						<button class="contact100-form-btn">
+							<span>
+								Submit
+								<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+							</span>
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+
+</div>
+
+<div id="Recovery" class="tabcontent">
+
+  <div class="container-contact100">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form">
+				<span class="contact100-form-title">
+					Recovery Form
+				</span>
+
+
+				<!-- <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+					<span class="label-input100">Email</span>
+					<input class="input100" type="text" name="email" placeholder="Enter your email addess">
+					<span class="focus-input100"></span>
+				</div> -->
+
+				<div class="wrap-input100 validate-input" data-validate="Name is required">
+					<span class="label-input100">Illicit</span>
+					<input class="input100" type="text"  id="illicit" name="illicit" >
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 validate-input">
+					<span class="label-input100">Licit</span>
+					<input class="input100" type="text" id="Licit" name="Licit">
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 validate-input">
+					<span class="label-input100">Lahan</span>
+					<input class="input100" type="text" id="Lahan" name="Lahan">
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 validate-input">
+					<span class="label-input100">Opium</span>
+					<input class="input100" type="text" id="Opium" name="Opium">
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 validate-input" >
+					<span class="label-input100">Poppy</span>
+					<input class="input100" type="text" id="Poppy" name="Poppy">
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 validate-input" >
+					<span class="label-input100">Heroin</span>
+					<input class="input100" id="Heroin" name="Heroin">
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 validate-input" >
+					<span class="label-input100">Charas</span>
+					<input class="input100" id="Charas" name="Charas">
+					<span class="focus-input100"></span>
+				</div>
+        <div class="wrap-input100 validate-input" >
+					<span class="label-input100">Ganja</span>
+					<input class="input100" id="Ganja" name="Ganja">
+					<span class="focus-input100"></span>
+				</div>
+       <div class="wrap-input100 validate-input" >
+        <span class="label-input100">Tablets</span>
+        <input class="input100" id="Tablets" name="Tablets">
+        <span class="focus-input100"></span>
+      </div>
+      <div class="wrap-input100 validate-input" >
+        <span class="label-input100">Injection</span>
+        <input class="input100" id="Injection" name="Injection">
+        <span class="focus-input100"></span>
+      </div>
+      <div class="wrap-input100 validate-input" >
+        <span class="label-input100">Others</span>
+        <input class="input100" id="Others" name="Others">
+        <span class="focus-input100"></span>
+      </div>
+				<div class="container-contact100-form-btn">
+					<div class="wrap-contact100-form-btn">
+						<div class="contact100-form-bgbtn"></div>
+						<button class="contact100-form-btn">
+							<span>
+								Submit
+								<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+							</span>
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+
+</div>
+
+
+<div id="Investigation" class="tabcontent">
+
+  
+</div>
+
+<!-- <div id="Recovery" class="tabcontent">
+    <h3>New Recovery Report</h3>
+    <form action="/action_page.php">
+        <label for="illicit">Illicit:</label>
+        <input type="text" id="illicit" name="illicit" value="" ><br><br>
+        <label for="Licit">Licit:</label>
+        <input type="text" id="Licit" name="Licit" ><br><br>
+        <label for="Lahan">Lahan:</label>
+        <input type="text" id="Lahan" name="Lahan" ><br><br>
+        <label for="Opium">Opium:</label>
+        <input type="text" id="Opium" name="Opium" ><br><br>
+        <label for="Poppy">Poppy:</label>
+        <input type="text" id="Poppy" name="Poppy" ><br><br>
+        <label for="Heroin">Heroin:</label>
+        <input type="text" id="Heroin" name="Heroin" ><br><br>
+        <label for="Charas">Charas:</label>
+        <input type="text" id="Charas" name="Charas" ><br><br>
+        <label for="Ganja">Ganja:</label>
+        <input type="text" id="Ganja" name="Ganja" ><br><br>
+        <label for="Tablets">Tablets:</label>
+        <input type="text" id="Tablets" name="Tablets" ><br><br>
+        <label for="Injection">Injection:</label>
+        <input type="text" id="Injection" name="Injection" ><br><br>
+        <label for="Others">Others:</label>
+        <input type="text" id="Others" name="Others" ><br><br>
+        <input type="submit" value="Submit">
+      </form> 
+</div> -->
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+</body>
+</html>
