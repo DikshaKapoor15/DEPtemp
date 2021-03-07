@@ -3,8 +3,8 @@
 {%  block title %}Login {% endblock %}
 
 {% block content %}
-    <form actions = "{{url_for('login')}}" , method = "POST">
-        <div>
+    <form class="form1" actions = "{{url_for('login')}}" , method = "POST">
+        <div class="un">
             {{form.username(class_ = 'form-control',
                 placeholder = 'Username', autocomplete = 'off',
                 autofocus = true)}}
